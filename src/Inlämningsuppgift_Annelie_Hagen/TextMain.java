@@ -19,9 +19,10 @@ public class TextMain {
         }
         scanner.close();
 
-        System.out.println("Antal rader, exkl raden med ordet 'stop', är: " + text.getLineCount());
-        System.out.println("Antal tecken är: " + text.getCharCount()); //Skriver ut antal tecken inkl mellanslag i raderna ovan.
-        System.out.println("Antal ord är: " + text.getWordCount()); //Skriver ut antal ord i raderna ovan
-        System.out.println("Det längsta ordet är: " + text.getLongestWord()); //Skriver ut längsta ordet
+        System.out.println("Antal rader, exkl raden med ordet 'stop', är: " + text.lineCount());
+        System.out.println("Antal tecken är: " + text.charCount()); //Skriver ut antal tecken inkl mellanslag i raderna ovan.
+        System.out.println("Antal ord är: " + text.wordCount()); //Skriver ut antal ord i raderna ovan
+        System.out.println("Det längsta ordet är: " + text.longestWord()); //Skriver ut längsta ordet
     }
 }
+

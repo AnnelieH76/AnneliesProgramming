@@ -7,8 +7,8 @@ public class TextClass {
     private ArrayList<String> inputLines; //Array med dynamisk storlek.
 
     public TextClass() { //Konstruktor
-        this.inputLines = new ArrayList<>(); //Skapar en ny tom ArrayList som startvärde för inputLines,
-        // vilket är att föredra framför en vanlig konstruktor i det här fallet enligt ChatGPT
+        this.inputLines = new ArrayList<>(); /*Skapar en ny tom ArrayList som startvärde för inputLines,
+        vilket är att föredra framför en vanlig konstruktor i det här fallet enligt ChatGPT*/
     }
 
     public boolean isStop(String input) { //Metod som kontrollerar om den inlästa textraden innehåller ordet "stop"
@@ -19,7 +19,7 @@ public class TextClass {
         inputLines.add(input);
     }
 
-    public int lineCount() { //Metod som räknar antal raderna
+    public int lineCount() { //Metod som räknar antal rader
         return inputLines.size();
     }
 
@@ -35,7 +35,7 @@ public class TextClass {
         for (int i = 0; i < inputLines.size(); i++) {
             String line = inputLines.get(i);//Hämtar raden från listan
             String[] words = line.trim().split("\\s+"); //Skapar en ny array av ord genom att dela upp raden vid mellanslag.
-            // trim() tar bort eventuella  mellanslag före och efter en rad.
+            // trim() tar bort eventuella mellanslag före och efter en rad.
             // split(" ") delar upp raden till ord baserat på mellanslag. \\s+ hanterar flera eventuella mellanslag efter varandra
             wordCount += words.length;  //Adderar antal ord för varje rad
         }

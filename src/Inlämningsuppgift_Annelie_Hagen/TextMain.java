@@ -10,12 +10,12 @@ public class TextMain {
 
         TextClass text = new TextClass();//Nytt objekt skapas
 
-        while (true){
+        while (true) {
             String input = scanner.nextLine(); //Läser in en rad med text och sparar den i variabeln input
-            if (text.isStop(input)){ //Om textobjektet som anropar metoden 'isStop' returnerar att den inlästa raden innehåller "stop"
+            if (text.isStop(input)) { //Om textobjektet som anropar metoden 'isStop' returnerar att raden innehåller "stop"
                 break; //Då bryts loopen
             }
-            text.addLine(input); //Annars lägg till den inlästa raden i textobjektet.
+            text.addLine(input); //Lägger till den inlästa raden i textobjektet.
         }
         scanner.close();
 
@@ -25,4 +25,3 @@ public class TextMain {
         System.out.println("Det längsta ordet är: " + text.longestWord()); //Skriver ut längsta ordet
     }
 }
-
